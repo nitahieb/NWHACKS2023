@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Adventure Awaits</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/TREESMOL.ico') }}" sizes="196x196"/>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Autour+One" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='assets/img/Logo3.png')}}" alt="Adventure Awaits Logo" width="200">
+            </a>
+            
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="{{ url_for('about') }}">About Us</a> 
+                <!-- Change href to webpage-->
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class= "masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        
+                        <h1 class="mx-auto my-0">Adventure Awaits </h1>
+                     
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Find me a path</h2>
+                        <form method="POST">
+
+                        <div class="row">
+                            <div class="col-xs-6 col-md-4">
+                                <div class="form-group">
+                                    <label for="Location">Your Location</label>
+                                    <input type="text" class="form-control" id="Location" placeholder="Enter location" 
+                                    name="location">
+                                  </div>
+                            </div>
+                            <div class="col-xs-6 col-md-4">
+                                Intensity
+                                <select class="form-control" name="difficulty">
+                                    <option>Any</option>
+                                    <option>Relaxed</option>
+                                    <option>Active</option>
+                                    <option>Intense</option>
+                                </select></div>
+                            <div class="col-xs-6 col-md-4">
+                                Time
+                                <select class="form-control" name="length">
+                                    <option>1 hour</option>
+                                    <option>2 hours</option>
+                                    <option>3 hours</option>
+                                    <option>4 hours</option>
+                                    <option>5 hours</option>
+                                    <option>6 hours</option>
+                                    <option>7 hours</option>
+                                    <option>8 hours</option>
+                                    <option>9 hours</option>
+                                    <option>10 hours</option>
+                                    <option>11 hours</option>
+                                    <option>12 hours</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <br>
+                         <button class="btn btn-primary" type="submit">Start Journey</button>
+                        </form>
+
+
+                        <br>
+                        <br>
+                         <h6 class="text-white-50 mx-auto mt-2 mb-5">Have a destination to share?
+                            <a href="{{ url_for('signup') }}">Enter it here!</a>
+                         </h6>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+        </header>
+
+        
+       
+
+        
+
+        
+    </body>
+</html>
