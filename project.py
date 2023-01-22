@@ -119,6 +119,30 @@ def returninfo(level,location,time):
     return print_directions(directions_result,[])
     
 
+def formatinstructions(level,location,time):
+        raw = returninfo(level, location, time)
+        processed = " "
+        for x in raw:
+
+            if str(x)[0].isnumeric():
+
+                val = str(x).split()
+
+                if len(val) > 1:
+                    if val[1] == 'm' or val[1] == 'km':
+                        processed = processed + "Travel " + x + " " 
+                    else:
+                        processed = processed + "for " + x + "<br>"
+                else:
+                    if len(val[0]) == 3:
+                        processed = processed + "Take the " + str(x) + " "
+                    else:
+                        processed = processed + str(x) + " stops" + "<br>"
+
+            else:
+                 processed = processed + x  + "<br>"
+
+        return processed
 
                 
 

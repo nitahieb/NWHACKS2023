@@ -56,7 +56,7 @@ def signup():
 
 @app.route("/directions")
 def directions():
-    data = returninfo(session['difficulty'],session['location'], session['length'])
+    data = formatinstructions(session['difficulty'],session['location'], session['length'])
 
     return render_template('directions.html',dataToRender=data)
 
