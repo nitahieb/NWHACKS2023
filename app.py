@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect, session
-from .project import print_directions, gmaps, returninfo, level1, level2, level3
+from .project import print_directions, gmaps, returninfo, level1, level2, level3, formatinstructions
 from datetime import datetime
 import pickle
 import sys
